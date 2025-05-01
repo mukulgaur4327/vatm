@@ -167,7 +167,7 @@ export class DashboardComponent {
     // ?${response.data.userOptInCode}
     this.postData(apiUrl, payload)
       .then(response => {
-        window.open(`https://purple-desert-0543b770f.6.azurestaticapps.net/#/introduction?${response.data.userOptInCode}`, '_blank');
+        window.open(`https://purple-desert-0543b770f.6.azurestaticapps.net/#/introduction?userOptInCode=${response.data.userOptInCode}`, '_blank');
         console.log('Success:', response);
         // Optionally show a success message
       })
