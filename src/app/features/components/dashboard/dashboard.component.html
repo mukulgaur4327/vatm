@@ -1,0 +1,30 @@
+<div class="dashboard-container">
+    <header class="dashboard-header">
+      <h1 class="header-title">VATM PARTNER PORTAL</h1>
+  
+      <div class="user-info" (click)="toggleDropdown()">
+        <img class="user-image" src="https://via.placeholder.com/40" alt="User" />
+        <div class="user-details">
+          <span class="user-name">{{userDetails.name}}</span>
+          <span class="user-email">{{userDetails.email}}</span>
+          <span class="user-phone">{{userDetails.phone}}</span>
+        </div>
+        <div class="dropdown-arrow">&#9662;</div>
+  
+        <div class="user-dropdown" *ngIf="dropdownOpen">
+          <p>Profile</p>
+          <p>Settings</p>
+          <p (click)="logout()">Logout</p>
+        </div>
+      </div>
+    </header>
+  
+    <main class="dashboard-content background">
+        <div class="welcome-box">
+          <h2>Welcome to the Partner Portal</h2>
+          <button class="access-btn" id="postButtonForVatmUserInterface" (click)="onPostButtonClick()"> Access User Panel</button>
+        </div>
+      </main>
+
+      <app-spinner *ngIf="isLoading"></app-spinner>
+  

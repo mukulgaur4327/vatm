@@ -1,0 +1,22 @@
+<div class="background">
+    <div class="form-box">
+        <h1>Welcome to Sound Royalties Partner Portal</h1>
+        <p class="subtitle">To get started, please login</p>
+
+        <form>
+            <label>Full Legal Name</label>
+            <input type="text" placeholder="Enter your full name" [(ngModel)]="user.name" name="name" />
+
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email" [(ngModel)]="user.email" name="email" />
+
+            <label>Cell Number</label>
+            <input type="tel" placeholder="Enter your number" [(ngModel)]="user.phone" name="phone" />
+            <div class="btn-div">
+                <button class="continue-btn" (click)="goToDashboard()">Login →</button>
+            </div>
+        </form>
+    </div>
+
+
+</div>

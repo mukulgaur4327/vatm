@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+ 
+body {
+  /* background-image: url('../assets/background.png'); */
+  background-image: url('../src/assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.toast {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards, fadeOut 0.5s forwards 2.5s;
+  }
+  
+  .toast.success {
+    background-color: #4caf50; /* Green for success */
+  }
+  
+  .toast.error {
+    background-color: #f44336; /* Red for error */
+  }
+  
+  .toast.info {
+    background-color: #2196f3; /* Blue for info */
+  }
+  
+  .toast.warning {
+    background-color: #ff9800; /* Orange for warning */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-20px);
+    }
+  }
+  
