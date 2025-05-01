@@ -17,6 +17,7 @@ export class LoginComponent {
     name: '',
     email: '',
     phone: '',
+    partnerArtistID:''
   };
 
   goToDashboard(){
