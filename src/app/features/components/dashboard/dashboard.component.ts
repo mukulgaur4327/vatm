@@ -156,6 +156,8 @@ export class DashboardComponent {
   }
 
   onPostButtonClick(): void {
+    const newTab = window.open('', '_blank');
+    this.isLoading = true
     const payload = {
       email: this.userDetails.email,
       cellNumber: this.userDetails.phone,
@@ -167,12 +169,19 @@ export class DashboardComponent {
     // ?${response.data.userOptInCode}
     this.postData(apiUrl, payload)
       .then(response => {
-        window.open(`https://purple-desert-0543b770f.6.azurestaticapps.net/#/introduction?userOptInCode=${response.data.userOptInCode}`, '_blank');
+      const urlToOpen = `https://purple-desert-0543b770f.6.azurestaticapps.net/#/introduction?userOptInCode=${response.data.userOptInCode}`;
+      if(newTab){
+        newTab.location.href = urlToOpen;
+      }
+        // window.open(`https://purple-desert-0543b770f.6.azurestaticapps.net/#/introduction?userOptInCode=${response.data.userOptInCode}`, '_blank');
         console.log('Success:', response);
+        this.isLoading = false
         // Optionally show a success message
       })
       .catch(error => {
         console.error('Error:', error);
+        this.isLoading = false
+
         // Optionally show an error message
       });
   }
