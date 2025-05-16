@@ -14,6 +14,9 @@
             <input type="tel" placeholder="Enter your number" [(ngModel)]="user.phone" name="phone" />
             <label>Artist ID</label>
             <input type="tel" placeholder="Enter your Partner Generated ID" [(ngModel)]="user.partnerArtistID" name="phone" />
+             <label>Partner UUID</label>
+            <input type="text" placeholder="Enter your Partner UUID" [(ngModel)]="user.partnerUUID" name="partnerUUID" />
+
             <div class="btn-div">
                 <button class="continue-btn" (click)="goToDashboard()">Login →</button>
             </div>

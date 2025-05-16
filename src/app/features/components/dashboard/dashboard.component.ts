@@ -162,7 +162,7 @@ export class DashboardComponent {
       email: this.userDetails.email,
       cellNumber: this.userDetails.phone,
       fullLegalName: this.userDetails.name,
-      partnerUUID: '0A9BB6B1-6C88-47A5-B2D0-ADB17E069490',
+      partnerUUID: this.userDetails.partnerUUID,
       partnerUserUID: this.userDetails.partnerArtistID
     };
     const apiUrl = 'https://apigateway20250430200434-azh2caase7a0hnb6.eastus2-01.azurewebsites.net/gateway/user/Capture/';

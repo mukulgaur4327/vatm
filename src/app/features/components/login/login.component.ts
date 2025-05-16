@@ -19,12 +19,13 @@ export class LoginComponent {
     name: '',
     email: '',
     phone: '',
-    partnerArtistID:''
+    partnerArtistID:'',
+    partnerUUID : ''
   };
 
   goToDashboard(){
     this.isLoading = true;
-    if(this.user.name == '' || this.user.email == '' || this.user.phone == '' || !this.user.partnerArtistID){
+    if(this.user.name == '' || this.user.email == '' || this.user.phone == '' || !this.user.partnerArtistID || !this.user.partnerUUID){
       this.toasterService.show('Please enter all details', 'error');
       this.isLoading = false;
     }
